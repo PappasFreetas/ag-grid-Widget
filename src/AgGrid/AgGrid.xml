@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="AgGrid.widget.AgGrid" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>AgGrid</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="listObject" type="entity" required="true" allowNonPersistableEntities="true" isPath="no">
+            <caption>Object</caption>
+            <category>Data Source</category>
+            <description>Object that will be populated in the grid</description>
+        </property>
+        <property key="dataMF" type="microflow" required="true">
+            <caption>Microflow that returns data</caption>
+            <category>Data Source</category>
+            <description>Return tpye: List of object to display in the grid</description>
+            <returnType type="Object" entityProperty="listObject" isList="true"/>
+        </property>
+        <property key="stickyAttribute" entityProperty="listObject" type="attribute" required="false">
+            <caption>Attribute to be sticky</caption>
+            <category>Data Source</category>
+            <description>If selected, this attribute will be sticky on the grid if on mobile</description>
+            <attributeTypes>
+                <attributeType name="String" />
+                <attributeType name="Boolean" />
+                <attributeType name="Integer" />
+                <attributeType name="Long" />
+                <attributeType name="DateTime" />
+                <attributeType name="Enum" />
+            </attributeTypes>
+        </property>
+        <property key="enableSorting" type="boolean" defaultValue="false">
+            <caption>Enable Sorting</caption>
+            <category>Appearance</category>
+            <description>Choose yes if you want the grid to be able to sort</description>
+        </property>
+        <property key="height" type="integer" defaultValue="500">
+            <caption>Height</caption>
+            <category>Appearance</category>
+            <description>The height of the grid in px. Defaults to 500</description>
+        </property>
+        <property key="width" type="integer" defaultValue="400">
+            <caption>Width</caption>
+            <category>Appearance</category>
+            <description>The width of the grid in px. Defaults to 400</description>
+        </property>
+    </properties>
+</widget>

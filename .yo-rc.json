@@ -1,0 +1,13 @@
+{
+  "generator-mendix": {
+    "promptValues": {
+      "copyright": "Nick Pappas 2018",
+      "license": "MIT",
+      "author": "Nick Pappas",
+      "boilerplate": "empty",
+      "widgetoptions": [
+        "templates"
+      ]
+    }
+  }
+}
